@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	/* Connect to an address, ie., creating the address structure */
 	struct sockaddr_in remote_address;
 	remote_address.sin_family = AF_INET;
-	remote_address.sin_port = htons(80);    /* port no. 80 , since most web servers run on that port */
+	remote_address.sin_port = htons(9001);    /* port number in server.c file is 9001. We can also give port no. 80 , since most web servers run on that port */
 
 	/* inet_aton() fn converts the address to a string in dots & numbers format (192.168.5.10) and vice-versa */
 	inet_aton(address, &remote_address.sin_addr.s_addr); 
